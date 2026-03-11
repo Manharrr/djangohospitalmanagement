@@ -4,4 +4,15 @@ booking
 {%endblock%}
 
 {%block content%}
-<h1>booking page</h1>  {%endblock%}
+<h1>make a appoinmant</h1>
+
+<form action="" method="POST">
+     {% csrf_token %}
+    {{form.as_p}}
+
+    <button type="submit">submit</button>
+</form>
+
+
+
+  {%endblock%}

@@ -5,4 +5,7 @@ from .models import Departments,Doctors,Booking
 
 admin.site.register(Departments)
 admin.site.register(Doctors)
-admin.site.register(Booking)
+class Bookingadmin(admin.ModelAdmin):
+    list_display=('id','pname','pphone','eemail','docname','bookingdate','bookedon')
+
+admin.site.register(Booking,Bookingadmin)#pass cheyyanam
