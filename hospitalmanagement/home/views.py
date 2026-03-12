@@ -46,3 +46,16 @@ def doctors(request):
 # def about(request):
 #     return HttpResponse("home pagess")
 
+# def view(request):
+
+#     form=classname
+
+#     if request.method=="POST"
+#     form=classname(request.post)
+
+#     if form.is_valid():
+#         name=form.cleaned_data['name']
+#         email=
+#         phone=
+#         print(name,email,phn)
+#         return render (request,"..... .html",{'form':form})

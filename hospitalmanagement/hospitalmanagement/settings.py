@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-+j-n9wj+3k3pj=$c32sacw=tannd@r!ji0j0vmm-*w)!f44ry6
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [] #Defines allowed domains for the Django app.
 
 
 # Application definition
@@ -39,7 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'home',
 ]
-
+#Middleware are layers between request and response.
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -49,10 +49,10 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
-
+#Defines the main URL configuration file.
 ROOT_URLCONF = 'hospitalmanagement.urls'
 
-TEMPLATES = [
+TEMPLATES = [ #Controls template engine.
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         # 'DIRS': ['templates'],
@@ -67,7 +67,7 @@ TEMPLATES = [
         },
     },
 ]
-
+#Used for deploying Django with web servers.
 WSGI_APPLICATION = 'hospitalmanagement.wsgi.application'
 
 
@@ -87,7 +87,7 @@ DATABASES = {
 
 AUTH_PASSWORD_VALIDATORS = [
     {
-        'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',
+        'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',#Prevent username similarity
     },
     {
         'NAME': 'django.contrib.auth.password_validation.MinimumLengthValidator',
