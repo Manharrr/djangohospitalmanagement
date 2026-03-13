@@ -23,3 +23,8 @@ urlpatterns = [
     path('contact', views.contact, name='contact'),
     path('department', views.department, name='department'),
 ]
+
+
+
+
+
