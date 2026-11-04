@@ -11,4 +11,27 @@ def about(request):
     return render(request,'about.html')
 
 def booking(request):
-    pass
+  
+    if request.method == "POST":
+        form=BookingForms(request.POST)
+        if form.is_valid():
+            form.save()
+            return render(request,'conform.html')
+
+    form=BookingForms()
+    dict_form={
+        'form':form
+    }
+
+    return render(request,'booking.html',dict_form)
+
+def contact(request):
+    return render(request,'contact.html')
+
+def department(request):
+    dept={
+        'dept':Departments.objects.all()
+    }
+
+    return render(request,'department.html',dept)
+
