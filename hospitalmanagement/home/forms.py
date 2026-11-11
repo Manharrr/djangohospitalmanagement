@@ -15,7 +15,7 @@ class BookingForms(forms.ModelForm):
         }
         label={
             'pname':"patient name:",
-            'pphone':"patient phone",
+            # 'pphone':"patient phone",
             'eemail':"patient email",
             'docname':"doctor name",
             'bookingdate':"booking date"

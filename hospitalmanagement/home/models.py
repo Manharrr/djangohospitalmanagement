@@ -19,13 +19,13 @@ class Doctors(models.Model):
         return'DR'+ self.doc_name +'-('+ self.doc_spec+')'
     # # image=models.ImageField(upload_to='doctors') #pillow library for image
 
-# class Booking(models.Model):
-#     pname= models.CharField(max_length=50)
-#     pphone=models.IntegerField()
-#     eemail=models.EmailField()
-#     docname=models.ForeignKey(Doctors, on_delete=models.CASCADE)
-#     bookingdate=models.DateField()
-#     bookedon=models.DateField(auto_now=True)
+class Booking(models.Model):
+    pname= models.CharField(max_length=50)
+    pphone=models.IntegerField()
+    eemail=models.EmailField()
+    docname=models.ForeignKey(Doctors, on_delete=models.CASCADE)
+    bookingdate=models.DateField()
+    bookedon=models.DateField(auto_now=True)
 
 
 
